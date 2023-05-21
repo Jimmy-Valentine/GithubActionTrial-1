@@ -1,0 +1,15 @@
+name : run main.py
+
+on: push
+  branch: [master]
+
+jobs:
+  exec:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # install the python version needed
+      - name: run main.py
+        run: python main.py
